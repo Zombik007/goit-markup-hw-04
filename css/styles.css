@@ -143,18 +143,54 @@ li {
   margin-left: auto;
 }
 
+.header-contacts-mail,
+.header-contacts-tel {
+  display: flex;
+  align-items: center;
+}
+
 /* Отступ справа для элемента "e-mail" */
 .header-contacts-mail {
   margin-right: 50px;
 }
 
+.contacts-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.contacts-icon-envelope {
+  width: 16px;
+  height: 12px;
+}
+
+.contacts-icon-smartphone {
+  width: 10px;
+  height: 16px;
+}
+
+.contacts-icon:hover,
+.contacts-icon:focus {
+  color: var(--accent-color);
+}
+
 /* Стили главного раздела страницы "Студия" */
 /* Фоновый цвет секции "Герой" */
 .hero {
+  padding: 0;
+  text-align: center;
+  background: #c4c4c4;
+}
+
+.hero .overlay {
+  background: linear-gradient(to bottom, #2f303a66, #2f303a66),
+    url(../images/heroImg.jpg);
+  max-width: 1600px;
+  height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
-  text-align: center;
-  background: #2f303a;
+  margin: 0 auto;
+  background-position: center;
 }
 
 /* Cтили для главного заголовка */
@@ -220,6 +256,22 @@ li {
 /* Задаются отступы элементам списка раздела "Особенности" кроме последнего */
 .features-list > .features-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.features-img {
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.features-icon {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  fill: currentColor;
 }
 
 /* Стили заголовков раздела "Особенности" */
@@ -292,9 +344,11 @@ li {
 
 /* Задается внутрений отступ, нижнее скругление и цвет фона карточек "Наша команда" */
 .team-item {
-  background-color: #fff;
+  background-color: var(--color-white);
   padding-bottom: 30px;
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Задаются отступы элементам списка раздела "Наша команда" кроме последнего */
@@ -323,6 +377,80 @@ li {
   text-align: center;
 }
 
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.team-social-list > .team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.customers {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.customers-caption {
+  font-size: 36px;
+  line-height: 1.17em;
+  text-align: center;
+  color: var(--text-caption-color);
+  margin-bottom: 50px;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+}
+
+.customers-list > .customers-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.customers-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 170px;
+  height: 90px;
+  padding: 20px 0;
+}
+
+.customers-icon {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  fill: currentColor;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
 /* Фон подвала */
 .footer {
   background-color: #2f303a;
@@ -330,15 +458,27 @@ li {
   padding-bottom: 60px;
 }
 
+/* .footer-align {
+  display: flex;
+} */
+
 /*  Нижний внешний отступ для логотипа в подвале сайта  */
 .logo {
-  display: block;
   margin-bottom: 20px;
 }
 
 /* Стили логотипа подвала */
 .logo-footer-studio {
   color: var(--color-white);
+}
+
+.footer-align {
+  display: flex;
+}
+
+.logo-address {
+  display: inline-flex;
+  flex-direction: column;
 }
 
 /* Общие стили текста подвала */
@@ -367,6 +507,57 @@ li {
 /* Цвет ссылки телефона */
 .footer-contacts-tel {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.logo-address {
+  margin-right: 70px;
+}
+
+.social {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.social-caption {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-list > .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 /* ===================== CSS страницы портфолио ===================== */
@@ -430,6 +621,12 @@ li {
   padding-bottom: 20px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
+}
+
+.projects-item:hover,
+.projects-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* Убирается правые внешние отступы у каждого третего элемента карточек "Проекты" */

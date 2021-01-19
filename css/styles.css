@@ -212,21 +212,19 @@ li {
 }
 
 /* Стили кнопки секции "Герой" */
-.hero-link {
-  line-height: 30px;
-  align-items: center;
+.hero-button {
+  font-weight: 700;
+  line-height: 1.875em;
   text-align: center;
-  letter-spacing: 0.06em;
   color: var(--color-white);
   background-color: var(--accent-color);
-  padding: 10px 32px;
   cursor: pointer;
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 200px;
+  min-width: 200px;
+  max-height: 50px;
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  padding: 10px 32px;
 }
 
 /* Стили для "невидимых" заголовков */
@@ -369,7 +367,7 @@ li {
 /* Стили заголовков карточек раздела "Наша команда" */
 .item-caption {
   font-weight: 500;
-  line-height: 19px;
+  line-height: 1.19em;
   text-align: center;
   color: var(--text-caption-color);
   margin-bottom: 10px;
@@ -378,7 +376,7 @@ li {
 /* Стили текста карточек раздела "Наша команда" */
 .item-text {
   font-weight: 400;
-  line-height: 19px;
+  line-height: 1.19em;
   text-align: center;
 }
 
@@ -539,7 +537,7 @@ li {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14em;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-white);
@@ -608,10 +606,11 @@ li {
 /* Стили кнопок фильтра */
 .filter-button {
   font-weight: 500;
-  line-height: 26px;
+  line-height: 1.625em;
   text-align: center;
   color: var(--text-caption-color);
   background-color: #f5f4fa;
+  min-height: 40px;
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -684,5 +683,5 @@ li {
 /* Стили текста карточек на странице "Портфолио" */
 .projects-text {
   font-weight: 400;
-  line-height: 30px;
+  line-height: 1.875em;
 }
